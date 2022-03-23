@@ -69,11 +69,10 @@ $(document).ready(function(){
   }).change();
 }); 
 
-// script toggle
-
+/* script toggle
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})
+}) */
 
 // script goles
 

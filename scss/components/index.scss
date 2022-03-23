@@ -1,7 +1,7 @@
 /*   ---------- index styles ----------   */
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: $black;
     header{
         position: absolute;
@@ -14,6 +14,7 @@ body{
             height: 30px;
             margin: 10px 15px;
             display: none;
+            cursor: pointer;
             div{
                 width: 100%;
                 height: 5px;
@@ -33,6 +34,7 @@ body{
         .menuList{
             margin: 20px;
             .listItem{
+                font-weight: 300;
                 display: inline-block;
                 padding: 0 10px;
                 a{
@@ -54,17 +56,26 @@ body{
             align-items: center;
             color: $white;
             .heroTitle{
-                font-family: 'League Gothic', sans-serif;
-                font-size: 4.75em;
+                font-family: 'Roboto', sans-serif;
+                font-size: 3em;
+                font-weight: 900;
+                margin: 0;
             }
             .heroSubtitle{
-                font-size: 1.1em;
+                font-size: 1.25em;
+                font-weight: 300;
+                letter-spacing: -0.5px;
             }
         }
         .noticiasFc{
             background-color: $black;
             color: $white;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            a{
+                text-decoration: none;
+                color: $white;
+            }
             section{
                 display: flex;
                 flex-wrap: wrap;
@@ -72,7 +83,7 @@ body{
                 align-items: center;
             }
             .newsCard{
-                background-image: linear-gradient(180deg, rgba(255,255,255,0) 100%, rgba(0,0,0,1) 100%), url("../img/fondoFC.jpg");
+                position: relative;
                 background-repeat: no-repeat;
                 background-size: cover;
                 border-radius: 15px;
@@ -87,18 +98,44 @@ body{
                 align-items: center;
                 transition: all 0.5s ease;
                 -webkit-transition: all 0.5s ease;
-                
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.5s ease;
+                }                
                 &:hover{
-                    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url("../img/fondoFC.jpg");
-                    background-size: 200%;
+                    img{
+                        transform: scale(1.25);
+                    }
+                }
+                &::after{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-color: rgba($color: #000000, $alpha: 0.6);
                 }
                 .cardTitle{
                     font-weight: 600;
                     font-size: 1.25em;
                     text-align: center;
+                    z-index: 1;
+                    text-shadow: 1px 1px 5px #000;
+                    margin: 0 15px;
                 }
                 .cardSubtitle{
+                    text-shadow: 1px 1px 5px #000;
+                    z-index: 1;
                     text-align: center;
+                    font-weight: 300;
+                    letter-spacing: -0.5px;
+                    margin: 0 15px 15px 15px;
                 }
             }
             .noticiasTitle{
@@ -172,6 +209,7 @@ body{
                             font-size: 1.15em;
                         }
                         td{
+                            min-width: 30px;
                             cursor: pointer;
                             span{
                                 display: none;
@@ -207,7 +245,7 @@ body{
                 filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
                 transition: all 1s ease;
                 -webkit-transition: all 2s ease;
-                z-index: -1;
+                z-index: 0;
                 &:hover{
                     transform: scale(1.15);
                 }
@@ -291,6 +329,7 @@ body{
             }
 
             .clubText{
+                font-weight: 300;
                 margin: 60px;
                 padding: 25px;
                 border-top-right-radius: 20px;
