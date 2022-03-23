@@ -1,0 +1,171 @@
+@media (max-width: 768px) {
+    .bodyFC{
+        header{
+            .menuList{
+                .listItem{
+                    font-size: 0.85em;
+                }
+            }
+        }
+        main{
+            .heroFC{
+                .heroTitle{
+                    font-size: 2.5em;
+                    text-align: center;
+                }
+                .heroSubtitle{
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .bodyFC{
+        header{
+            position: fixed;
+            height: 90px;
+            background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+            justify-content: space-between;
+            padding-top: 10px;
+            img{
+                height: 85px;
+                width: auto;
+            }
+            .menuList{
+                display: none;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(15, 127, 172);
+                margin: 0;
+                padding: 30% 0 0 0;
+                .listItem{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 60px;
+                    font-family: 'Oswald', sans-serif;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                    &:hover{
+                        a{
+                            color: $black;
+                        }
+                        background-color: $white;
+                    }
+                }
+            }
+            .hamburgerFc{
+                display: inline-block;
+                z-index: 1;
+            }
+            #hamburgerFc.on .one {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+              
+            #hamburgerFc.on .two {
+            opacity: 0;
+            }
+            
+            #hamburgerFc.on .three {
+            transform: rotate(-45deg) translate(7px, -8px);
+            }
+        }
+
+        main{
+            .heroFC{
+                .heroTitle{
+                    font-size: 2em;
+                    text-align: center;
+                }
+                .heroSubtitle{
+                    font-size: 1em;
+                }
+            }
+            .noticiasFc{
+                text-align: center;
+                .noticiasTitle{
+                    font-size: 3.5em;
+                }
+                section{
+                    .newsCard{
+                        height: 200px;
+                    }
+                }
+            }
+
+            .resultadosFc{
+                .resultadosTitle{
+                    font-size: 3.5em;
+                }
+                .resultadosTable{
+                    label{
+                        font-size: 1em;
+                    }
+                    table{
+                        font-size: 0.75em;
+                        width: 90%;
+                        tr{
+                            th{
+                                min-width: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fixtureFc{
+                .fixtureTitle{
+                    font-size: 3.5em;
+                    text-align: center;
+                }
+                img{
+                    width: 80px;
+                }
+                .torneo{
+                    font-size: 3em;
+                }
+                section{
+                    margin: 15px;
+                    font-size: 0.75em;
+                    
+                }
+            }
+
+            .galeriaFc{
+                .galeriaTitle{
+                    font-size: 3.5em;
+                    text-align: center;
+                }
+                .photo-gallery{
+                    .container{
+                        .row{
+                            .item{
+                                position: unset;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .upArrow{
+            right: 15px;
+            bottom: 15px;
+        }
+        footer{
+            position: static;
+            .footerDerechos{
+                font-size: 0.5em;
+            }
+            .footerRedes{
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
