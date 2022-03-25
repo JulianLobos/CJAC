@@ -383,6 +383,45 @@ body {
       body footer .footerRedes img:hover {
         transform: scale(1.1); }
 
+/*   --------- noticias ---------   */
+.bodyNoticias {
+  color: #e2e2e2; }
+  .bodyNoticias main {
+    padding: 200px 0 0 0;
+    display: flex; }
+    .bodyNoticias main article {
+      display: flex;
+      flex-direction: column; }
+      .bodyNoticias main article .articleDate {
+        font-weight: 300;
+        font-style: italic;
+        padding: 0 30px; }
+      .bodyNoticias main article .articleTitle {
+        font-family: 'League Gothic', sans-serif;
+        font-size: 4.5em;
+        padding: 0 30px 25px 30px; }
+      .bodyNoticias main article .articleSubtitle {
+        font-family: 'Roboto', sans-serif;
+        padding: 0 40px 0 40px; }
+      .bodyNoticias main article .articleImg {
+        margin: 30px auto; }
+      .bodyNoticias main article .articleText {
+        padding: 0 40px; }
+      .bodyNoticias main article .photo-gallery .container .photos .item a img {
+        padding: 25px 15px; }
+    .bodyNoticias main aside {
+      padding: 200px 30px;
+      border-left: 1px #ccc solid; }
+      .bodyNoticias main aside div p {
+        font-family: 'League Gothic', sans-serif;
+        font-size: 3.5em; }
+      .bodyNoticias main aside div a {
+        color: #e2e2e2; }
+        .bodyNoticias main aside div a .click {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1em;
+          font-style: italic; }
+
 @media (max-width: 768px) {
   body header .menuList .listItem {
     font-size: 0.85em; }

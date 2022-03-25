@@ -1,0 +1,65 @@
+/*   --------- noticias ---------   */
+
+.bodyNoticias{
+    color: $white;
+    main{
+        padding: 200px 0 0 0;
+        display: flex;
+        article{
+            display: flex;
+            flex-direction: column;
+
+            .articleDate{
+                font-weight: 300;
+                font-style: italic;
+                padding: 0 30px;
+            }
+            .articleTitle{
+                font-family: 'League Gothic', sans-serif;
+                font-size: 4.5em;
+                padding: 0 30px 25px 30px;
+            }
+            .articleSubtitle{
+                font-family: 'Roboto', sans-serif;
+                padding: 0 40px 0 40px;
+            }
+            .articleImg{
+                margin: 30px auto;
+            }
+            .articleText{
+                padding: 0 40px;
+            }
+            .photo-gallery{
+                .container{
+                    .photos{
+                        .item{
+                            a{
+                                img{
+                                    padding: 25px 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        aside{
+            padding: 200px 30px;
+            border-left: 1px #ccc solid;
+            div{
+                p{
+                    font-family: 'League Gothic', sans-serif;
+                    font-size: 3.5em;
+                }
+                a{
+                    color: $white;
+                    .click{
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 1em;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}
