@@ -392,6 +392,9 @@ body {
     .bodyNoticias main article {
       display: flex;
       flex-direction: column; }
+      .bodyNoticias main article .articleImg {
+        margin: 30px auto;
+        width: 60%; }
       .bodyNoticias main article .articleDate {
         font-weight: 300;
         font-style: italic;
@@ -399,12 +402,11 @@ body {
       .bodyNoticias main article .articleTitle {
         font-family: 'League Gothic', sans-serif;
         font-size: 4.5em;
-        padding: 0 30px 25px 30px; }
+        padding: 0 30px;
+        line-height: 60px; }
       .bodyNoticias main article .articleSubtitle {
         font-family: 'Roboto', sans-serif;
-        padding: 0 40px 0 40px; }
-      .bodyNoticias main article .articleImg {
-        margin: 30px auto; }
+        padding: 0 30px 0 30px; }
       .bodyNoticias main article .articleText {
         padding: 0 40px; }
       .bodyNoticias main article .photo-gallery .container .photos .item a img {
@@ -422,6 +424,40 @@ body {
           font-size: 1em;
           font-style: italic; }
 
+.noticiasPage main {
+  padding: 200px 0 0 0; }
+  .noticiasPage main .newsTitle {
+    color: #e2e2e2;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 4.5em;
+    padding: 0 30px 25px 30px; }
+  .noticiasPage main a {
+    text-decoration: none;
+    color: #e2e2e2; }
+    .noticiasPage main a .newsCard {
+      padding: 25px 30px 25px 30px;
+      margin: 0 40px 20px 40px;
+      display: flex;
+      border: 1px solid #e2e2e2;
+      border-radius: 30px;
+      transition: all 0.3s ease; }
+      .noticiasPage main a .newsCard img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover; }
+      .noticiasPage main a .newsCard .titles {
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 0 15px; }
+        .noticiasPage main a .newsCard .titles .cardTitle {
+          font-weight: 700;
+          font-size: 1.25em;
+          margin: 0;
+          padding: 0; }
+      .noticiasPage main a .newsCard:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
+
 @media (max-width: 768px) {
   body header .menuList .listItem {
     font-size: 0.85em; }
@@ -429,94 +465,162 @@ body {
     font-size: 2.5em;
     text-align: center; }
   body main .heroFC .heroSubtitle {
-    font-size: 1em; } }
-
-@media (max-width: 576px) {
-  body main .heroFC .heroTitle {
-    font-size: 2em;
-    text-align: center; }
-  body main .heroFC .heroSubtitle {
     font-size: 1em; }
-  body main .noticiasFc {
-    text-align: center; }
-    body main .noticiasFc .noticiasTitle {
-      font-size: 3.5em; }
-    body main .noticiasFc section .newsCard {
-      height: 200px; }
-  body main .resultadosFc .resultadosTitle {
-    font-size: 3.5em; }
-  body main .resultadosFc .resultadosTable label {
-    font-size: 1em; }
-  body main .resultadosFc .resultadosTable table {
-    font-size: 0.75em;
-    width: 90%; }
-    body main .resultadosFc .resultadosTable table tr th {
-      min-width: 25px; }
-  body main .fixtureFc .fixtureTitle {
-    font-size: 3.5em;
-    text-align: center; }
-  body main .fixtureFc img {
-    width: 80px;
-    z-index: -1; }
-  body main .fixtureFc .torneo {
-    font-size: 3em; }
-  body main .fixtureFc section {
-    margin: 15px;
-    font-size: 0.75em; }
-  body main .galeriaFc .galeriaTitle {
-    font-size: 3.5em;
-    text-align: center; }
-  body main .galeriaFc .photo-gallery .container .row .item {
-    position: unset; }
-  body .upArrow {
-    z-index: 3;
-    right: 15px;
-    bottom: 15px; }
-  body footer {
-    position: static; }
-    body footer .footerDerechos {
-      font-size: 0.5em; }
-    body footer .footerRedes img {
-      width: 15px; }
-  body header {
-    z-index: 3;
-    position: fixed;
-    height: 90px;
-    background-image: linear-gradient(black, rgba(255, 255, 255, 0));
-    justify-content: space-between;
-    padding-top: 10px; }
-    body header img {
-      height: 85px;
-      width: auto; }
-    body header .menuList {
-      display: none;
-      position: absolute;
-      top: 0;
+  .bodyNoticias main {
+    padding: 200px 0 0 0;
+    flex-direction: column; }
+    .bodyNoticias main article .articleImg {
       width: 100%;
-      height: 100vh;
-      background-color: #0f7fac;
-      margin: 0;
-      padding: 30% 0 0 0;
-      z-index: 2; }
-      body header .menuList .listItem {
-        z-index: inherit;
-        display: flex;
+      height: auto; }
+    .bodyNoticias main article .photo-gallery .container {
+      display: flex;
+      flex-wrap: wrap; }
+      .bodyNoticias main article .photo-gallery .container .photos {
+        display: inherit;
         justify-content: center;
         align-items: center;
-        height: 60px;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.5em; }
-        body header .menuList .listItem:hover {
-          background-color: #e2e2e2; }
-          body header .menuList .listItem:hover a {
-            color: #222222; }
-    body header .hamburgerFc {
-      display: inline-block;
-      z-index: 10; }
-    body header #hamburgerFc.on .one {
-      transform: rotate(45deg) translate(5px, 5px); }
-    body header #hamburgerFc.on .two {
-      opacity: 0; }
-    body header #hamburgerFc.on .three {
-      transform: rotate(-45deg) translate(7px, -8px); } }
+        margin: 25px 0; }
+        .bodyNoticias main article .photo-gallery .container .photos .item {
+          width: unset;
+          margin: 0;
+          padding: 0; }
+          .bodyNoticias main article .photo-gallery .container .photos .item a img {
+            width: 200px;
+            height: auto;
+            padding: 15px; }
+    .bodyNoticias main aside {
+      border-left: none;
+      border-top: 1px solid #e2e2e2;
+      padding: 50px 30px; } }
+
+@media (max-width: 576px) {
+  .bodyNoticias {
+    font-size: 12px; }
+    .bodyNoticias main {
+      padding: 100px 0 0 0;
+      flex-direction: column; }
+      .bodyNoticias main article img {
+        width: 100%;
+        height: auto; }
+      .bodyNoticias main article .photo-gallery .container {
+        display: flex;
+        flex-wrap: wrap; }
+        .bodyNoticias main article .photo-gallery .container .photos .item {
+          width: unset;
+          margin: 0;
+          padding: 0; }
+          .bodyNoticias main article .photo-gallery .container .photos .item a img {
+            width: 100px;
+            height: auto;
+            padding: 15px; }
+      .bodyNoticias main aside {
+        border-left: none;
+        border-top: 1px solid #e2e2e2;
+        padding: 50px 30px; }
+  .noticiasPage {
+    font-size: 12px;
+    height: 100%; }
+    .noticiasPage main {
+      padding: 100px 0 0 0; }
+      .noticiasPage main a .newsCard {
+        flex-direction: column;
+        padding: 15px 20px; }
+        .noticiasPage main a .newsCard img {
+          align-self: center;
+          padding: 0 0 10px 0; }
+  body {
+    font-size: 12px; }
+    body main .heroFC .heroTitle {
+      font-size: 2em;
+      text-align: center; }
+    body main .heroFC .heroSubtitle {
+      font-size: 1em; }
+    body main .noticiasFc {
+      text-align: center; }
+      body main .noticiasFc .noticiasTitle {
+        font-size: 3.5em; }
+      body main .noticiasFc section .newsCard {
+        height: 200px; }
+    body main .resultadosFc .resultadosTitle {
+      font-size: 3.5em; }
+    body main .resultadosFc .resultadosTable label {
+      font-size: 1em; }
+    body main .resultadosFc .resultadosTable table {
+      font-size: 0.75em;
+      width: 90%; }
+      body main .resultadosFc .resultadosTable table tr th {
+        min-width: 25px; }
+    body main .fixtureFc .fixtureTitle {
+      font-size: 3.5em;
+      text-align: center; }
+    body main .fixtureFc img {
+      width: 80px;
+      z-index: -1; }
+    body main .fixtureFc .torneo {
+      font-size: 3em; }
+    body main .fixtureFc section {
+      margin: 15px;
+      font-size: 0.75em; }
+      body main .fixtureFc section .nextCard {
+        margin: 10px; }
+        body main .fixtureFc section .nextCard .matchDate {
+          padding: 0 0 10px 0; }
+        body main .fixtureFc section .nextCard p {
+          margin: 0 0 0.5rem 0; }
+    body main .galeriaFc .galeriaTitle {
+      font-size: 3.5em;
+      text-align: center; }
+    body main .galeriaFc .photo-gallery .container .row .item {
+      position: unset; }
+    body .upArrow {
+      z-index: 3;
+      right: 15px;
+      bottom: 15px; }
+    body footer {
+      position: static; }
+      body footer .footerDerechos {
+        font-size: 0.5em; }
+      body footer .footerRedes img {
+        width: 15px; }
+    body header {
+      z-index: 3;
+      position: fixed;
+      height: 90px;
+      background-image: linear-gradient(black, rgba(255, 255, 255, 0));
+      justify-content: space-between;
+      padding-top: 10px; }
+      body header img {
+        height: 85px;
+        width: auto; }
+      body header .menuList {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #0f7fac;
+        margin: 0;
+        padding: 30% 0 0 0;
+        z-index: 2; }
+        body header .menuList .listItem {
+          z-index: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60px;
+          font-family: 'Oswald', sans-serif;
+          text-transform: uppercase;
+          font-size: 1.5em; }
+          body header .menuList .listItem:hover {
+            background-color: #e2e2e2; }
+            body header .menuList .listItem:hover a {
+              color: #222222; }
+      body header .hamburgerFc {
+        display: inline-block;
+        z-index: 10; }
+      body header #hamburgerFc.on .one {
+        transform: rotate(45deg) translate(5px, 5px); }
+      body header #hamburgerFc.on .two {
+        opacity: 0; }
+      body header #hamburgerFc.on .three {
+        transform: rotate(-45deg) translate(7px, -8px); } }
